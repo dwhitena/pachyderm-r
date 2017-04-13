@@ -1,3 +1,5 @@
+library(caret)
+
 # load the CSV file from the local directory
 dataset <- read.csv("/pfs/training/iris.csv", header=FALSE)
 
