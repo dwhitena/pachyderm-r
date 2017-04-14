@@ -1,3 +1,5 @@
+library(caret)
+
 # load model
 load("model.rda")
 
