@@ -1,7 +1,7 @@
 library(caret)
 
 # load the CSV file from the local directory
-dataset <- read.csv(path = "/pfs/training/iris.csv", header = FALSE)
+dataset <- read.csv("/pfs/training/iris.csv", header = FALSE)
 
 # set the column names in the dataset
 colnames(dataset) <- c("Sepal.Length",
@@ -17,7 +17,7 @@ metric <- "Accuracy"
 # SVM
 set.seed(7)
 fit.svm <- train(form = Species ~ ., 
-	             data = dataset,
+	         data = dataset,
                  method = "svmRadial", 
                  metric = metric, 
                  trControl = control)

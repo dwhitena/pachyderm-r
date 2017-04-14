@@ -19,9 +19,10 @@ for (file in files){
 	dataset <- read.csv(file, header=FALSE)
         colnames(dataset) <- cols
         
-		# perform the inference
+	# perform the inference
         predictions <- predict(fit.svm, dataset)
         
-		# output the results
-        write.csv(predictions, file = paste("/pfs/out/", file, sep = "")) 
+	# output the results
+        write.csv(predictions, file = paste("/pfs/out/", basename(file), sep = "")) 
 }
+
