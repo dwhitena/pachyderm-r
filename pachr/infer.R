@@ -5,12 +5,12 @@ load("model.rda")
 
 # loop over input files performing inference
 files <- list.files(path = "/pfs/attributes", 
-					pattern = "*.csv", 
+                    pattern = "*.csv", 
 					full.names = T, 
 					recursive = FALSE)
 					
 cols <- c("Sepal.Length",
-		  "Sepal.Width",
+          "Sepal.Width",
 		  "Petal.Length",
 		  "Petal.Width")
 		  
