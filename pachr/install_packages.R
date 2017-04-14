@@ -1,3 +1,4 @@
-install.packages("caret")
-install.packages("kernlab")
-install.packages("e1071")
+install.packages(c("caret","kernlab","e1071"),
+                 repos = "http://lib.stat.cmu.edu/R/CRAN", 
+                 dependencies = TRUE)
+    
