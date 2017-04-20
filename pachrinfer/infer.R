@@ -5,7 +5,7 @@ library(tools)
 load("/pfs/model/model.rda")
 
 # loop over input files performing inference
-files <- list.files(path = "test", 
+files <- list.files(path = "/pfs/attributes", 
                     pattern = "*.csv", 
                     full.names = T, 
                     recursive = FALSE)
