@@ -1,0 +1,24 @@
+{
+  "pipeline": {
+    "name": "model"
+  },
+  "transform": {
+    "image": "dwhitena/pachr:svm",
+    "cmd": [ 
+	"Rscript", 
+	"train.R" 
+    ]
+  },
+  "parallelism_spec": {
+    "strategy": "CONSTANT",
+    "constant": "1"
+  },
+  "inputs": [
+    {
+      "repo": {
+        "name": "training"
+      },
+      "glob": "/"
+    }
+  ]
+}
