@@ -3,7 +3,7 @@
     "name": "model"
   },
   "transform": {
-    "image": "dwhitena/pachr:svm",
+    "image": "dwhitena/pachrtrain:svm",
     "cmd": [ 
 	"Rscript", 
 	"train.R" 

@@ -16,7 +16,7 @@ metric <- "Accuracy"
 
 # SVM
 set.seed(7)
-fit.svm <- train(form = Species ~ ., 
+fit.model <- train(form = Species ~ ., 
 	         data = dataset,
                  method = "svmRadial", 
                  metric = metric, 
@@ -24,8 +24,8 @@ fit.svm <- train(form = Species ~ .,
 
 # save a summary of this model
 sink("/pfs/out/model.txt", append=FALSE, split=FALSE)
-print(fit.svm)
+print(fit.model)
 
 # persist the model
-save(fit.svm, file = "/pfs/out/model.rda")
+save(fit.model, file = "/pfs/out/model.rda")
 

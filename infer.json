@@ -3,7 +3,7 @@
     "name": "inference"
   },
   "transform": {
-    "image": "dwhitena/pachr:svm",
+    "image": "dwhitena/pachrinfer",
     "cmd": [ 
 	"Rscript",
 	"infer.R"
@@ -11,7 +11,7 @@
   },
   "parallelism_spec": {
     "strategy": "CONSTANT",
-    "constant": "1"
+    "constant": "3"
   },
   "inputs": [
     {

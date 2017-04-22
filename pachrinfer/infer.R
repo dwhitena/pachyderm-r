@@ -25,7 +25,7 @@ for (file in files){
         colnames(dataset) <- cols
         
         # perform the inference
-        predictions <- predict(fit.svm, dataset)
+        predictions <- predict(fit.model, dataset)
         
 	# output the results
         write(species[predictions], 
