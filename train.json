@@ -3,7 +3,7 @@
     "name": "model"
   },
   "transform": {
-    "image": "dwhitena/pachrtrain:svm",
+    "image": "dwhitena/pachrtrain:lda",
     "cmd": [ 
 	"Rscript", 
 	"train.R" 
@@ -13,12 +13,10 @@
     "strategy": "CONSTANT",
     "constant": "1"
   },
-  "inputs": [
-    {
-      "repo": {
-        "name": "training"
-      },
+  "input": {
+    "atom": {
+      "repo": "training",
       "glob": "/"
     }
-  ]
+  }
 }
